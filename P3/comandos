@@ -1,0 +1,45 @@
+priority->mira o cambia las prioridades de un proceso getpriority y set priority desde -20 a 19 (menor n = mayor prioridad)
+	
+	which-> q tipo de prioridad (en esta prac son solo PRIO_PROCESS)
+	who->pid
+showvar-> 
+fork -> esta en codeAyuda
+execute -> execv para no prioridad sin crear nuevo proceso para salir execv
+el pibe para ***** usa xterm -fg color
+ver man 7 signal
+
+
+
+
+				ALVARO
+				
+				
+*-priority:
+la prioridad solo puede cambiar a valores mas grandes
+-showvar: 
+pasar tercer argumento en el main con las variables de los argumentos de los procesos
+buscar man environ
+getenv llamada al sistema,por lo que no se guarda ningun valor
+-changevar: -a y -e hacen lo mismo pero utilizando distintas funciones
+putenv es una llamada al sistema
+si no existe la variable en el array tiene que mostrar un error
+-showenv
+sin argumentos te muestra las variables que estan en el tercer argumento del main
+environ te muestra las variables que estan en environ
+-fork: crea un proceso hijo
+si haces un exit despues de hacer un fork solo sales de la llamada del proceso hijo
+-execute: man execv
+-la lista solo es para procesos en segundo plano hasta despues de execute no se actualiza
+-** no es un comando: lo que hace es que cuando introduces un comando que no esta en la lista lo intenta ejecutar y crea un nuevo proceso (si añadimos un & lo crea en segundo plano)
+whogang en vez de 0 en wait
+-listjobs: lista los procesos en segundo plano
+waitpid de todos los procesos , para actualizarlos
+-deljobs:
+
+
+-kill: NO hay que implementarlo se hace en la shell predefinida de linux
+SIGSTOP
+SIGCONT
+
+
+*/
